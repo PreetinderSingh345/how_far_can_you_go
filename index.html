@@ -1,0 +1,166 @@
+<html>
+    <head>
+
+        <title>How Far Can You Go</title>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <!-- above is the link to use font awesome CDN -->
+
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <!-- above is the link to use animate.css CDN -->
+
+        <link rel="stylesheet" type="text/css" href="./style.css">        
+        <!-- above is the link to the external stylesheet -->
+
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <!-- meta tag for adjusting the content according to the device width -->
+
+    </head>
+
+    <body>     
+    
+        <!-- heading container -->
+
+        <div id="heading-container">
+
+            <!-- start button -->
+
+            <button id="start">start game</button>
+
+            <!-- heading -->
+
+            <div id="heading">
+
+                <i class="fas fa-walking"></i>
+                <span>How Far Can You Go</span>
+
+            </div>       
+            
+            <!-- outer volume container -->
+
+            <div id="volume-container-outer">
+
+                <!-- inner volume container containing mute and unmute icons -->
+
+                <div id="volume-container-inner">                   
+
+                    <i id="mute" class="fas fa-volume-mute"></i>            
+                    <i id="unmute" class="fas fa-volume-up"></i>               
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- main container -->
+
+        <div id="main-container">
+
+            <!-- high score text -->
+
+            <div id="high-score-text" class="high-score-styling">High Score</div>
+
+            <!-- game canvas -->
+
+            <canvas id="game-canvas" height="300" width="450"></canvas>       
+
+            <!-- high score value -->
+
+            <div id="high-score-value" class="high-score-styling">0</div>
+
+        </div>
+
+        <!-- controls instructions container -->
+
+        <div id="controls-instructions-container">
+
+            <!-- controls heading -->
+
+            <div id="controls-heading">
+            
+                <i class="fas fa-gamepad"></i>
+                <span>Controls</span>                    
+
+            </div>
+
+            <!-- controls content -->
+
+            <div id="controls-content">
+
+                <!-- wads container to give 3d effect -->
+
+                <div id="wads-container-3d" class="container-3d">
+
+                    <!-- wads container containing the w, a, d and s elements -->
+
+                    <div id="wads-container" class="controls-container-styling">
+
+                        <div id="w" class="controls-styling top-ctr">W</div>
+                        <div id="a" class="controls-styling left-ctr">A</div>
+                        <div id="d" class="controls-styling right-ctr">D</div>
+                        <div id="s" class="controls-styling down-ctr">S</div>
+
+                    </div>
+
+                </div>
+
+                <!-- instructions container -->
+
+                <div id="instructions">
+                    Try to travel as far as you can and its game over if you hit an obstacle
+                </div>
+
+                <!-- arrow container to give 3d effect -->
+
+                <div id="arrow-container-3d" class="container-3d">
+
+                    <!-- arrow container containing the up, left, right and down elements  -->
+
+                    <div id="arrow-container" class="controls-container-styling">
+
+                        <i id="up" class="fas fa-arrow-up controls-styling top-ctr"></i>                        
+                        <i id="left" class="fas fa-arrow-left controls-styling left-ctr"></i>                        
+                        <i id="right" class="fas fa-arrow-right controls-styling right-ctr"></i>                        
+                        <i id="down" class="fas fa-arrow-down controls-styling down-ctr"></i>                        
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>      
+        
+        <!-- new high score message container -->
+
+        <div id="new-high-score-message" class="message">
+
+            <i class="fas fa-handshake"></i>
+            <span>new high score!!!</span>            
+
+        </div>
+
+        <!-- game over message container -->
+
+        <div id="game-over-message" class="message">
+
+            <i class="fas fa-sad-tear"></i>
+            <span>game over</span>
+
+        </div>
+
+        <!-- audios for background, game over and the high score music -->
+
+        <audio id="background-music" src="./sounds/music.mp3" type="mp3/audio" loop></audio>
+        <audio id="game-over-music" src="./sounds/gameOver.wav" type="wav/audio"></audio>     
+        <audio id="high-score-music" src="./sounds/highScore.wav" type="wav/audio"></audio>   
+
+        <script type="text/javascript" src="./script.js"></script>
+        <!-- above is the link to the external javascript file -->
+
+    </body>
+</html>

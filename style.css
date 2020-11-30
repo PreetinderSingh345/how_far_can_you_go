@@ -1,0 +1,356 @@
+/* body */
+
+body{
+
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;  
+    font-family: sans-serif;
+    min-width: 560px;
+    min-height: 550px;
+    background-image: linear-gradient(to top right, rgb(141, 208, 235), rgb(240, 202, 240), rgb(141, 208, 235));
+    box-shadow: 0 0 10px 10px rgb(131, 232, 250);
+    border-radius: 20px;    
+    border: 2px inset rgb(196, 194, 194);    
+
+}
+
+/* heading container */
+
+#heading-container{
+
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+/* start button */
+
+#start{
+    
+    width: 15%;
+    font-size: 1rem;
+    font-weight: bold;
+    color: whitesmoke;
+    padding: 5px 10px;    
+    background-color: rgb(248, 76, 46);
+    border: 2px outset darkslategray;
+    border-radius: 20px;
+    text-transform: uppercase;
+    outline: none;
+    transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+/* adjusting the font size of the start button according to the screen width */
+
+@media only screen and (max-width: 550px){
+
+    body #start{
+        font-size: 0.9rem;
+    }
+
+}
+
+#start:hover{
+    box-shadow: 0 0 4px 4px rgb(119, 116, 116);
+}
+
+/* heading */
+
+#heading{
+    
+    width: 70%;
+    color: darkslateblue;
+    padding: 5px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 5px;    
+    background-color: rgb(156, 162, 250);
+    border-radius: 20px;
+
+}
+
+/* outer volume container */
+
+#volume-container-outer{
+       
+    width: 15%;    
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    
+}
+
+/* inner volume container */
+
+#volume-container-inner{
+
+    position: relative;
+    height: 30px;
+    width: 30px;     
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px outset darkslategray;
+    border-radius: 50%;
+    background-color: rgb(245, 53, 53);
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+#volume-container-inner:hover{
+    box-shadow: 0 0 4px 4px rgb(119, 116, 116);
+}
+
+#volume-container-inner i{
+
+    position: absolute;
+    color: darkslategray;
+    font-size: 1.2rem;     
+    transition: opacity 0.3s ease-in-out;  
+
+}
+
+/* unmute icon */
+
+#unmute{
+    opacity: 0;
+}
+
+/* main container */
+
+#main-container{
+
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+/* high score styling for the high score message and value */
+
+.high-score-styling{
+
+    width: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(90, 64, 241);
+    text-shadow: 2px 2px 4px rgb(52, 157, 218);
+    word-break: break-all;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; 
+    text-transform: uppercase;
+
+}
+
+/* game canvas */
+
+#game-canvas{
+        
+    opacity: 0.3;
+    margin: 0;
+    padding: 0;    
+    background-color: rgb(220, 241, 245);    
+    border: 4px outset darkslategrey;        
+
+}
+
+/* controls instructions container */
+
+#controls-instructions-container{
+
+    color: darkslategrey;
+    width: 90%;    
+    border-radius: 20px;
+
+}
+
+/* controls heading */
+
+#controls-heading{
+        
+    font-size: 1.5rem;    
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgb(140, 161, 231);
+
+}
+
+/* controls content */
+
+#controls-content{
+    
+    padding: 10px 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(202, 228, 236);
+
+}
+
+/* controls container styling */
+
+.controls-container-styling{
+
+    position: relative;
+    height: 120px;
+    width: 120px; 
+    border-radius: 20px;
+    background-color: rgb(238, 235, 235);
+}
+
+/* 3d container styling */
+
+.container-3d{
+    perspective: 500px; 
+}
+
+/* controls styling */
+
+.controls-styling{
+    
+    font-weight: bold;
+    color: whitesmoke;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: darkslategrey;
+    border-radius: 5px;  
+
+}
+
+/* top control */
+
+.top-ctr{
+
+    top: 10;
+    left: 45px;
+
+}
+
+/* left control */
+
+.left-ctr{
+
+    left: 10;
+    top: 45px;
+
+}
+
+/* right control */
+
+.right-ctr{
+
+    right: 10;
+    top: 45px;
+
+}
+
+/* down control */
+
+.down-ctr{
+
+    bottom: 10;
+    left: 45px;
+
+}
+
+/* instructions container */
+
+#instructions{
+
+    width: 30%;    
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: center;
+
+}
+
+/* message styling for the high score and game over message */
+
+.message{
+
+    opacity: 0;
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+/* new high score message */
+
+#new-high-score-message{
+    
+    color: orange;
+    text-shadow: 2px 2px 6px red;
+ 
+}
+
+/* game over message */
+
+#game-over-message{
+    
+    color: darkslategray;
+    text-shadow: 2px 2px 6px grey;        
+
+}
+
+/* audio */
+
+audio{
+
+    display: none;
+
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar{
+
+    height: 10px;
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track{
+    background-color: lightgrey;
+}
+
+::-webkit-scrollbar-thumb{
+
+    border-radius: 20px;
+    background-color: grey;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background-color: white;
+    box-shadow: 0 0 2px 2px inset darkslategray;
+
+}
